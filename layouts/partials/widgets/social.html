@@ -10,11 +10,19 @@
 			</a>
 		</div>
 		{{- end }}
-		{{- with .Site.Params.widgets.social.twitter }}
+		{{- with .Site.Params.widgets.social.artstation }}
 		<div class="widget-social__item widget__item">
-			<a class="widget-social__link widget__link btn" title="Twitter" rel="noopener noreferrer" href="https://twitter.com/{{ . }}" target="_blank">
-				{{ partial "svg/twitter.svg" (dict "class" "widget-social__link-icon") }}
-				<span>Twitter</span>
+			<a class="widget-social__link widget__link btn" title="Artstation" rel="noopener noreferrer" href="https://www.artstation.com/{{ . }}" target="_blank">
+				{{ partial "svg/artstation.svg" (dict "class" "widget-social__link-icon") }}
+				<span >Artstation</span>
+			</a>
+		</div>
+		{{- end }}
+		{{- with .Site.Params.widgets.social.youtube }}
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Youtube" rel="noopener noreferrer" href="https://www.youtube.com/{{ . }}" target="_blank">
+				{{ partial "svg/youtube.svg" (dict "class" "widget-social__link-icon") }}
+				<span>Youtube</span>
 			</a>
 		</div>
 		{{- end }}
@@ -23,6 +31,14 @@
 			<a class="widget-social__link widget__link btn" title="Instagram" rel="noopener noreferrer" href="https://www.instagram.com/{{ . }}" target="_blank">
 				{{ partial "svg/instagram.svg" (dict "class" "widget-social__link-icon") }}
 				<span>Instagram</span>
+			</a>
+		</div>
+		{{- end }}
+		{{- with .Site.Params.widgets.social.twitter }}
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Twitter" rel="noopener noreferrer" href="https://twitter.com/{{ . }}" target="_blank">
+				{{ partial "svg/twitter.svg" (dict "class" "widget-social__link-icon") }}
+				<span>Twitter</span>
 			</a>
 		</div>
 		{{- end }}
@@ -66,11 +82,12 @@
 			</a>
 		</div>
 		{{- end }}
+
 		{{- with .Site.Params.widgets.social.email }}
 		<div class="widget-social__item widget__item">
 			<a class="widget-social__link widget__link btn" title="Email" href="mailto:{{ . }}">
 				{{ partial "svg/email.svg" (dict "class" "widget-social__link-icon") }}
-				<span>{{ . }}</span>
+				<span>Drop me an email</span>
 			</a>
 		</div>
 		{{- end }}

@@ -1,6 +1,6 @@
-{{- $highlightColor := .Site.Params.style.vars.highlightColor | default (.Site.Params.highlightColor | default "#e22d30") -}}
+{{- $highlightColor := .Site.Params.style.vars.highlightColor | default (.Site.Params.highlightColor | default "#06b6d4") -}}
 
-{{- $fontSans := `"Open Sans", Helvetica, Arial, sans-serif` -}}
+{{- $fontSans := `"OpenSans", Helvetica, Arial, sans-serif` -}}
 {{- $fontMono := `SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace` -}}
 {{- $fontFamilyPrimary := .Site.Params.style.vars.fontFamilyPrimary | default $fontSans -}}
 {{- $fontFamilySecondary := .Site.Params.style.vars.fontFamilySecondary | default $fontMono -}}
@@ -51,8 +51,8 @@ html {
 body {
 	margin: 0;
 	font-family: {{ $fontFamilyPrimary }};
-	font-size: 14px;
-	font-size: .875rem;
+	font-size: 16px;
+	font-size: 1rem;
 	line-height: 1.6;
 	word-wrap: break-word;
 	background: #f7f7f7;
@@ -132,11 +132,11 @@ textarea {
 
 /* Button */
 .btn {
-	padding: 5px 10px;
+	padding: 10px 10px 10px;
 	font-weight: 700;
 	color: #fff;
 	white-space: pre-line;
-	background: #2a2a2a;
+	background: #082f49;
 }
 
 .btn:hover {
@@ -297,7 +297,7 @@ pre code {
 kbd {
 	padding: 2px 3px;
 	color: #fff;
-	background-color: #2a2a2a;
+	background-color: #082f49;
 }
 
 blockquote {
@@ -460,7 +460,7 @@ select {
 	padding: 0;
 	font: inherit;
 	color: #fff;
-	background: #2a2a2a;
+	background: #082f49;
 	border: 0;
 	outline: 0;
 }
@@ -500,7 +500,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 
 .menu__list {
 	list-style: none;
-	background: #2a2a2a;
+	background: #082f49;
 }
 
 .menu__item:hover {
@@ -865,6 +865,8 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 
 /* List content */
 .list__item {
+	display: flex;
+	flex-direction: column;
 	padding-bottom: 20px;
 	padding-bottom: 1.25rem;
 	margin-bottom: 20px;
@@ -886,14 +888,16 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	margin-top: 5px;
 }
 
-.list__thumbnail {
+.list__thumbnail {0 0 10px rgba(50, 50, 50, .17)
 	float: left;
-	margin: 0 20px 0 0;
+	margin: 0 0 20px 0;
 }
 
 .list__thumbnail img {
 	width: 100%;
-	max-width: 235px;
+	max-width: 1030px;
+	max-height: 200px;
+	object-fit: cover;
 }
 
 .list__footer-readmore {
@@ -968,6 +972,10 @@ img {
 	vertical-align: bottom;
 }
 
+.img__shadow {
+	box-shadow: 5px 5px 10px rgba(50, 50, 50, .17)
+}
+
 iframe,
 embed,
 object,
@@ -1000,7 +1008,7 @@ th {
 /* Forms */
 input {
 	padding: 5px;
-	font-size: 12px;
+	font-size: 1rem;
 	vertical-align: middle;
 	background: #f5f5f5;
 	border: 1px solid #ebebeb;
@@ -1109,7 +1117,7 @@ textarea {
 	width: 90%;
 	padding: 8px;
 	margin: 0 auto;
-	font-size: 11px;
+	font-size: .875rem;
 	cursor: pointer;
 	background: #fff;
 	border: 1px solid #ebebeb;
@@ -1131,14 +1139,15 @@ textarea {
 }
 
 .widget-social__link {
-	display: block;
+	display: flex;
 	margin: 0 0 8px;
 	white-space: normal;
+	align-items: center;
 }
 
 .widget-social__link-icon {
-	margin: 0 5px 0 0;
-	vertical-align: middle;
+	margin: 0 8px 0 0;
+    vertical-align: middle;
 	fill: #fff;
 }
 
@@ -1170,7 +1179,7 @@ textarea {
 	font-size: 12px;
 	font-size: .75rem;
 	color: #999;
-	background: #2a2a2a;
+	background: #082f49;
 	border-top: 3px solid #999;
 }
 
@@ -1260,6 +1269,8 @@ textarea {
 	}
 }
 
+
+
 @media screen and (max-width: 620px) {
 	input[type=text],
 	input[type=email],
@@ -1309,7 +1320,7 @@ textarea {
 	}
 
 	.list__thumbnail {
-		max-width: 80px;
+		max-width: 620px;
 	}
 
 	.list__title {
@@ -1328,3 +1339,4 @@ textarea {
 		font-size: .6875rem;
 	}
 }
+
