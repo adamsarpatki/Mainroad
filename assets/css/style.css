@@ -389,7 +389,7 @@ select {
 }
 
 .logo {
-	padding: 25px;
+	padding: 1.5625rem;
 }
 
 .logo__link {
@@ -397,12 +397,13 @@ select {
 }
 
 .logo__item {
-	display: inline-block;
-	vertical-align: middle;
+	display: flex;
+	flex-direction: column;
 }
 
 .logo__img {
-	max-height: 256px;
+	max-height: 200px;
+	object-fit: cover;
 }
 
 .logo__text {
@@ -410,12 +411,11 @@ select {
 }
 
 .logo--mixed .logo__item {
-	margin: .5rem auto;
+	margin: 0 0 1.5rem;
 }
 
 .logo--mixed .logo__img {
-	max-width: 128px;
-	max-height: 128px;
+	width: 1030px;
 }
 
 .logo--mixed .logo__text {
@@ -426,18 +426,22 @@ select {
 	font-size: 32px;
 	font-size: 2rem;
 	font-weight: 700;
+	letter-spacing: 2px;
 	line-height: 1;
 	color: #000;
+	text-align: center;
 }
 
 .logo__tagline {
 	display: inline-block;
 	padding-top: 10px;
 	margin-top: 10px;
-	font-size: 14px;
-	font-size: .875rem;
+	font-size: 16px;
+	font-size: 1rem;
 	font-weight: 700;
+	letter-spacing: 1px;
 	line-height: 1;
+	text-align: center;
 	color: {{ $highlightColor }};
 	border-top: 1px solid #ebebeb;
 }
@@ -459,8 +463,8 @@ select {
 	width: 100%;
 	padding: 0;
 	font: inherit;
-	color: #fff;
-	background: #082f49;
+	color: #082f49;
+	background: none;
 	border: 0;
 	outline: 0;
 }
@@ -500,7 +504,10 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 
 .menu__list {
 	list-style: none;
-	background: #082f49;
+	background: #fff;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
 .menu__item:hover {
@@ -515,16 +522,24 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	background: {{ $highlightColor }};
 }
 
+.menu__item--active .menu__link {
+	color: #fff;
+}
+
 .menu__link {
 	display: block;
 	padding: 10px 15px;
 	padding: .625rem .9375rem;
 	font-weight: 700;
-	color: #fff;
+	color: #082f49;
 	text-transform: uppercase;
 }
 
 .menu__link:hover {
+	color: #fff;
+}
+
+.menu__link:active {
 	color: #fff;
 }
 
