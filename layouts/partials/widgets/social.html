@@ -34,6 +34,14 @@
 			</a>
 		</div>
 		{{- end }}
+		{{- with .Site.Params.widgets.social.threads }}
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Threads" rel="noopener noreferrer" href="https://www.threads.net/{{ . }}" target="_blank">
+				{{ partial "svg/threads.svg" (dict "class" "widget-social__link-icon") }}
+				<span>Threads</span>
+			</a>
+		</div>
+		{{- end }}
 		{{- with .Site.Params.widgets.social.twitter }}
 		<div class="widget-social__item widget__item">
 			<a class="widget-social__link widget__link btn" title="Twitter" rel="noopener noreferrer" href="https://twitter.com/{{ . }}" target="_blank">
